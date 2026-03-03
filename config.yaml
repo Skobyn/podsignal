@@ -1,0 +1,28 @@
+# PodSignal Configuration
+# Edit this file to define your ICP and search settings.
+
+# Your company — Claude uses this to score fit and write emails
+your_company:
+  name: "Get Apex Insights"
+  description: "Marketing and Operations intelligence and analytics for Restaurants and Hospitality brands"
+  pitch: "We help operators understand what's actually driving growth — without building a data team"
+
+search:
+  # How far back to scan for episodes (in days)
+  days_back: 30
+
+  # Max episodes to pull per show (most recent first)
+  max_episodes_per_show: 20
+
+output:
+  # Only include leads scored at or above this threshold (1-10)
+  min_score: 6
+
+  # Output format: "csv" or "json"
+  format: "csv"
+
+# Optional: SerpAPI for more reliable LinkedIn search at higher volumes
+# Free tier: 100 searches/month — sign up at serpapi.com (no credit card)
+serpapi:
+  enabled: false
+  api_key: ""   # Or set SERPAPI_KEY env var

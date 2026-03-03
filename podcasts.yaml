@@ -1,0 +1,67 @@
+# PodSignal — Target Podcast List
+# Add shows where your ICP appears as guests.
+# Find any podcast's RSS feed by Googling "[show name] RSS feed"
+# or searching at podcastindex.org
+
+podcasts:
+
+  # ── B2B SaaS / Founder Shows ──────────────────────────────────────────────
+  #
+  # - name: "My First Million"
+  #   rss: "https://feeds.megaphone.fm/mfm"
+  #   icp_notes: "Entrepreneurs actively building or exploring new revenue streams"
+  #
+  # - name: "SaaStr Podcast"
+  #   rss: "https://feeds.simplecast.com/cRiB46PT"
+  #   icp_notes: "SaaS founders and operators at Series A through growth stage"
+  #
+  # - name: "Lenny's Podcast"
+  #   rss: "https://feeds.transistor.fm/lennys-podcast-product-growth-career"
+  #   icp_notes: "Product leaders and growth operators at high-growth SaaS companies"
+  #
+  # - name: "Founders"
+  #   rss: "https://feeds.simplecast.com/8e3lKkXQ"
+  #   icp_notes: "Founder biographies — guests are usually historians studying operators"
+  #
+  # - name: "20VC"
+  #   rss: "https://feeds.megaphone.fm/20VC"
+  #   icp_notes: "Founders raising or recently raised — high budget authority"
+
+  # ── Restaurant / Hospitality ──────────────────────────────────────────────
+
+  - name: "Restaurant Unstoppable"
+    rss: "https://restaurantunstoppable.libsyn.com/rss"
+    icp_notes: "Independent restaurant operators focused on growth and systems"
+
+  - name: "The Restaurant Coach Podcast"
+    rss: "http://therestaurantcoachpodcast.blubrry.net/feed/podcast/"
+    icp_notes: "Restaurant owners working on profitability and operations"
+
+  - name: "Hospitality Daily"
+    rss: "https://feeds.buzzsprout.com/2103299.rss"
+    icp_notes: "Hotel and hospitality operators, GMs, and brand builders"
+
+  # ── E-commerce / Retail ───────────────────────────────────────────────────
+
+  - name: "2X eCommerce"
+    rss: "https://feeds.transistor.fm/2x-ecommerce-podcast"
+    icp_notes: "DTC brand founders scaling past $1M ARR"
+
+  - name: "Shopify Masters"
+    rss: "https://feeds.simplecast.com/_Mc9bpsL"
+    icp_notes: "Shopify merchants building brand + systems — often recent funders"
+
+  #   # ── General Founder / Leadership ──────────────────────────────────────────
+  #
+  #   - name: "How I Built This"
+  #     rss: "https://feeds.npr.org/510313/podcast.xml"
+  #     icp_notes: "Scaled consumer and B2B company founders — high credibility signal"
+  #
+  #   - name: "Masters of Scale"
+  #     rss: "https://feeds.simplecast.com/SJov0RHR"
+  #     icp_notes: "Growth-stage founders and operators — typically well-funded"
+  #
+  #   - name: "The Tim Ferriss Show"
+  #     rss: "https://rss.art19.com/tim-ferriss-show"
+  #     icp_notes: "High-performance operators and investors — broad ICP but high quality"
+  #
