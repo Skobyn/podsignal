@@ -223,7 +223,9 @@ async def discover_podcasts(keyword: str) -> list[dict]:
 UI_DIST = Path(__file__).parent.parent / "ui" / "dist"
 
 if UI_DIST.exists():
-    app.mount("/assets", StaticFiles(directory=str(UI_DIST / "assets")), name="assets")
+    assets_dir = UI_DIST / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
 
     @app.get("/{full_path:path}")
     async def serve_frontend(full_path: str):
