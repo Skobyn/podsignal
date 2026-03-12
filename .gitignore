@@ -24,3 +24,5 @@ output/
 # Local MCP/Claude config
 .mcp.json
 CLAUDE.md
+!ui/dist/
+!ui/dist/**
