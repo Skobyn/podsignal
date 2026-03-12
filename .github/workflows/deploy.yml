@@ -8,7 +8,7 @@ env:
   PROJECT_ID: apex-internal-apps
   REGION: us-central1
   SERVICE: podsignal
-  IMAGE: gcr.io/apex-internal-apps/podsignal
+  IMAGE: us-central1-docker.pkg.dev/apex-internal-apps/workflow-assistant/podsignal
 
 jobs:
   deploy:
@@ -25,11 +25,15 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Configure Docker for GCR
-        run: gcloud auth configure-docker
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
       - name: Build Docker image
-        run: docker build -t $IMAGE:${{ github.sha }} -t $IMAGE:latest .
+        run: |
+          docker build \
+            -t $IMAGE:${{ github.sha }} \
+            -t $IMAGE:latest \
+            .
 
       - name: Push Docker image
         run: |
@@ -50,8 +54,7 @@ jobs:
             --set-env-vars "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" \
             --timeout 300
 
-      - name: Get service URL
+      - name: Output URL
         run: |
           URL=$(gcloud run services describe $SERVICE --region=$REGION --format='value(status.url)')
-          echo "✅ Deployed: $URL"
-          echo "SERVICE_URL=$URL" >> $GITHUB_ENV
+          echo "✅ PodSignal live at: $URL"
